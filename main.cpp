@@ -60,58 +60,6 @@ public:
     }
 }; 
 
-/*class Paddle {                                          //inheritance
-protected:
-    void LimitMovement() {
-        if (y <= 0) {
-            y = 0;
-        }
-        if (y + height >= GetScreenHeight()) {
-            y = GetScreenHeight() - height;
-        }
-    }
-
-public:
-    float x, y;
-    float width, height;
-    int speed;
-    Texture2D texture_paddle;
-
-    ~Paddle() {
-        UnloadTexture(texture_paddle);
-    }
-
-    void Draw() {
-        //DrawRectangleRounded(Rectangle{ x, y, width, height }, 0.8, 0, BLACK);  //Paddle color
-        Rectangle sourceRec = { 0,0, texture_paddle.width,texture_paddle.height };
-        Rectangle ballRect = { x, y, width, height };
-        DrawTexturePro(texture_paddle, sourceRec, ballRect, Vector2{ 0,0 }, 0, WHITE);
-    }
-
-    void Update() {
-        if (IsKeyDown(KEY_UP)) {                            //Keys we used
-            y = y - speed;
-        }
-        if (IsKeyDown(KEY_DOWN)) {
-            y = y + speed;
-        }
-        LimitMovement();
-    }
-};
-
-class CpuPaddle : public Paddle {                           //dervied class
-public:
-    void Update(int ball_y) {
-        if (y + height / 2 > ball_y) {
-            y = y - speed;
-        }
-        if (y + height / 2 <= ball_y) {
-            y = y + speed;
-        }
-        LimitMovement();
-    }
-}; */
-
 Ball ball;
 PlayerPaddle player;
 CpuPaddle cpu;
