@@ -1,7 +1,7 @@
 #include <iostream>
 #include <raylib.h>
 #include "PlayerPaddle.h"
-#include "CpuPaddle.h"                                  //for line 117 to work
+#include "CpuPaddle.h"                                  //for line 65 to work
 using namespace std;
 
 int player_score = 0;
